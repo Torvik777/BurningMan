@@ -2,10 +2,11 @@ body
 {
    
     padding: 0;
-    margin: 0;
+    margin: auto;
     font-family: 'Anton', sans-serif;
     color: 000;
     font-size: 16px;
+    overflow-x: hidden;
 } 
 
 h1,h2,h3,h4,h5,h6
@@ -23,14 +24,18 @@ ul, li
 }
 .container
 { 
-width: 1170px; 
+position: relative;
+width: 1166px; 
 /* позиционирования по центру */
 margin: auto;
+align-items: center;
 }
 /* HEADER */
 .header
 {
+    width: 1600px;
     background: url('../img/header-bg.jpg') no-repeat center top /cover;
+    margin: auto;
     padding-top: 57px;
     color: #fff;
     padding-bottom: 322px;
@@ -76,10 +81,18 @@ font-family: Anton ;
 {
     font-size: 17px;
     text-decoration: none;
-    margin-left: auto ;
+    margin-left: auto;
+    margin-right: 30px;
+    text-align: left;
     letter-spacing: 0.1em;
 
 }
+.menu-open
+{
+    background: 0%;
+    border: 0px;
+}
+
 /* HEADER MAIN */
 .header_main
 {
@@ -190,4 +203,154 @@ width: 191px
     color: #000000; 
 }
 
+
+/* RESPONSIVE STARTS HERE */
+@media screen and (max-width: 1400px) {
+    .container
+    {
+        width: 1200px;
+    }
+    .header
+    {
+        width: 1200px;
+    }
+    .nav
+    {
+        width: 1200px;
+    }
+    .menu-open
+    {
+        margin-right: auto;
+        text-align: right;
+        display: none;
+    }
+    
+}
+.header .show-menu
+{
+    
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    top: 10px;
+    display: block;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .container
+    {
+        width: 1140px;
+    }
+    .header
+    {
+        width: 1140px;
+    }
+    .nav
+    {
+        width: 1140px;
+    }
+    
+}
+@media screen and (max-width: 991px) {
+    .container
+    {
+        width: 720px;
+    }
+    .header
+    {
+        width: 720px;
+    }
+    .nav
+    {
+        width: 720px;
+    }
+    .main_information 
+    {
+        display: unset;
+    }
+    .images
+    {
+        display: unset;
+    }
+    .images img:nth-child(1)
+    {
+        width: 46%;
+    }
+    .images img:nth-child(2)
+    {
+        width: 46%;
+    }
+    .images img:nth-child(3)
+    {
+        width: 92.5%;
+    }
+   
+    
+}
+@media screen and (max-width: 767px) {
+    .container
+    {
+        width: 540px;
+    }
+    .header
+    {
+        width: 540px;
+    }
+
+    .burning_man
+    {
+        line-height: 1.1em; 
+        margin-top: 10px; 
+    }
+    .menu
+    {
+        display: none;
+    }
+    .menu-open
+    {
+        display: block;
+    }
+    .images img:nth-child(1)
+    {
+        width: 90%;
+    }
+    .images img:nth-child(2)
+    {
+        width: 90%;
+    }
+    .images img:nth-child(3)
+    {
+        width: 90%;
+    }
+
+   
+
+
+    
+}
+@media screen and (max-width: 575px) {
+    .container
+    {   
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .main_information p, .main_information h2
+    {
+        width: 90%;
+        margin: auto;
+    }
+    .images img:nth-child(1),
+    .images img:nth-child(2),
+    .images img:nth-child(3)
+    {
+        width: 90%;
+    }
+    .vsc-initialized
+    {
+        margin: auto;
+    }
+   
+}
 
